@@ -1,0 +1,22 @@
+#index {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    height: 100vh;
+    .sub-title {
+        background: #fff;
+        .am-search-input {
+            background: #e4e5e7
+        }
+    }
+    .recom {
+        .recomTit {
+            margin-left: 30px;
+            margin-top: 34px;
+            margin-bottom: 34px;
+            font-size: 36px;
+            color: #333;
+        }
+    }
+
+}
