@@ -1,8 +1,8 @@
-// import { combineReducers } from 'redux'
-// import sear from './sear'
+import { combineReducers } from "redux";
+import sear from "./sear";
 
-// const store = combineReducers({
-//     sear
-// })
+const store = combineReducers({
+  sear
+});
 
-// export default store
+export default store;

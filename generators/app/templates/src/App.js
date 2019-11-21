@@ -1,13 +1,11 @@
-import React from 'react';
-import Index from './pages/index/index.js'
-import "./styles/reset.scss"
+import React from "react";
+import Test from "./pages/test/test.js";
+import "./styles/reset.scss";
 
 class App extends React.Component {
-    render() {
-        return (
-            <div><Index></Index></div>
-        );
-    }
-};
+  render() {
+    return <Test></Test>;
+  }
+}
 
-export default App
+export default App;

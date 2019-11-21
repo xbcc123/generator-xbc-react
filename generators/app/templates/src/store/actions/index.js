@@ -1,6 +1,6 @@
-// export const searActions = text => {
-//     return {
-//         type: 'SEARCH',
-//         text
-//     }
-// }
+export const searActions = text => {
+  return {
+    type: "SEARCH",
+    text
+  };
+};
