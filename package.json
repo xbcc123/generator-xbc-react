@@ -23,9 +23,10 @@
     "yosay": "^2.0.2"
   },
   "devDependencies": {
+    "babel-preset-mobx": "^2.0.0",
     "commitizen": "^2.3.0",
-    "validate-commit-msg": "^2.11.1",
     "conventional-changelog-cli": "^1.2.0",
-    "husky": "^0.13.1"
+    "husky": "^0.13.1",
+    "validate-commit-msg": "^2.11.1"
   }
 }

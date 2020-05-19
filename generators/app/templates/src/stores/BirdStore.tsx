@@ -3,7 +3,6 @@ import { observable, computed, action, toJS } from 'mobx';
 class BirdStore {
   // object array map
   @observable birds;
-
   constructor() {
     this.birds = ['qiuzhi99'];
   }
