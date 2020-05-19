@@ -1,6 +1,8 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
 import { renderRoutes } from "react-router-config";
+import { Switch } from 'antd';
+import { Button } from 'antd';
 
 import s from "./index.scss";
 

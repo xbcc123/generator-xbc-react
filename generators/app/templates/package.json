@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
@@ -26,12 +28,13 @@
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
     "autoprefixer": "^9.4.4",
+    "babel-preset-react-app": "^9.1.2",
     "feflow-devkit-xbc-webpack4": "^0.0.21",
     "husky": "^4.2.5",
     "mockjs": "^1.1.0"
   },
   "dependencies": {
-    "antd": "^3.26.13",
+    "antd": "^4.2.4",
     "echarts": "^4.7.0",
     "echarts-for-react": "^2.0.15-beta.1",
     "mobx": "^5.15.4",

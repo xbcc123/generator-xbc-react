@@ -1,38 +1,52 @@
-# generator-xbc-react [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> 
+# [generator-ivweb](https://github.com/feflow/generator-ivweb)
+
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/feflow/generator-ivweb/blob/master/LICENSE)
+[![npm package](https://img.shields.io/npm/v/generator-ivweb.svg?style=flat-square)](https://www.npmjs.org/package/generator-ivweb)
+[![NPM downloads](http://img.shields.io/npm/dt/generator-ivweb.svg?style=flat-square)](https://npmjs.org/package/generator-ivweb)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/feflow/generator-ivweb/pulls)
+[![developing with feflow](https://img.shields.io/badge/developing%20with-feflow-1b95e0.svg)](https://github.com/feflow/feflow)
+
+Tencent IVWEB Team project generator, based on React, redux and webpack.
+
+## Features
+
+- ✔︎ Easy to create a project with react and redux
+- ✔︎ Support multiple page development
+- ✔︎ Built-in Rem, it's friendly to develop a mobile application
+- ✔︎ Fast build speed and very small artifacts size
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-xbc-react using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+You need to install [`feflow`](https://github.com/feflow/feflow) first, it will pass a context to generator-ivweb.
 
-```bash
-npm install -g yo
-npm install -g generator-xbc-react
+```sh
+$ npm install feflow-cli -g
 ```
 
-Then generate your new project:
+Then install generator-ivweb
 
-```bash
-yo xbc-react
+```sh
+$ feflow install generator-ivweb
+```
+## Usage
+
+```sh
+$ feflow init
 ```
 
-## Getting To Know Yeoman
+Note: use arrow keys to select.
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+## Contributing
+
+1. Check for open issues or open a fresh issue to start a discussion around a feature idea or a bug.
+2. Fork [the repository](https://github.com/feflow/generator-ivweb) on GitHub to start making your changes to the **master** branch (or branch off of it).
+3. Write a test which shows that the bug was fixed or that the feature works as expected.
+4. Send a pull request and bug the maintainer until it gets merged and published. :) Make sure to add yourself to [AUTHORS_](AUTHORS).
+
+## Changelog
+
+[Changelog](CHANGELOG.md)
 
 ## License
+[MIT](https://tldrlegal.com/license/mit-license).
 
-Apache-2.0 © [yankangjie]()
-
-
-[npm-image]: https://badge.fury.io/js/generator-xbc-react.svg
-[npm-url]: https://npmjs.org/package/generator-xbc-react
-[travis-image]: https://travis-ci.com/xbcc123/generator-xbc-react.svg?branch=master
-[travis-url]: https://travis-ci.com/xbcc123/generator-xbc-react
-[daviddm-image]: https://david-dm.org/xbcc123/generator-xbc-react.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/xbcc123/generator-xbc-react
-[coveralls-image]: https://coveralls.io/repos/xbcc123/generator-xbc-react/badge.svg
-[coveralls-url]: https://coveralls.io/r/xbcc123/generator-xbc-react

@@ -1,21 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import reducers from './store/reducers/index';
-import App from './App.tsx';
+import stores from './stores/index';
+import { configure } from 'mobx';
+import { Provider } from 'mobx-react'
 import { ConfigProvider } from 'antd';
-
 import zhCN from 'antd/es/locale/zh_CN';
+import App from './App';
 
-let store = createStore(reducers);
+
+configure({ enforceActions: "observed" });
 
 // locale={zhCN}
 ReactDOM.render(
 	<ConfigProvider locale={zhCN}>
-		<Provider store={store}>
-			<App /> 
-		</Provider>
+  <Provider { ...stores }>
+    <App />
+  </Provider>
 	</ConfigProvider>,
 	document.getElementById('root')
 );
