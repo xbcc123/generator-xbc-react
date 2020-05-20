@@ -16,13 +16,12 @@ module.exports = class extends Generator {
    * Print welcome message
    */
   initializing() {
-    this.log(yosay('Feflow脚手架'));
+    this.log(yosay('fef脚手架'));
     this.log(
       chalk.magenta(
-        `你好` +
+        `您好` +
         '\n' +
-        '这个是中谷科技React后台管理前端项目的项目脚手架' +
-        '\n'
+        '这是中谷科技后台管理前端项目脚手架'
       )
     );
   }
