@@ -4,12 +4,12 @@ import { renderRoutes } from "react-router-config";
 import { Switch } from 'antd';
 import { Button } from 'antd';
 
-import s from "./index.scss";
+// import s from "./index.scss";
 
 class Index extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		// this.state = {};
 	}
 
 	render() {

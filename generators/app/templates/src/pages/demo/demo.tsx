@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Row, Col, Card, Input, Button, Form, InputNumber } from 'antd'
 import { withRouter } from 'react-router-dom'
-import s from './demo.scss'
+// import s from './demo.scss'
+import moment from 'moment'
+import app from '@/global'
 
 export interface HelloProps {
     compiler: string
@@ -11,7 +13,9 @@ export interface HelloProps {
 class DataManna extends Component<IProps, IState> {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+			a: 1
+		}
     }
 
     componentDidMount() {
@@ -77,7 +81,7 @@ class DataManna extends Component<IProps, IState> {
                     <Row>
                         <Col span={1}>保险费</Col>
                         <Col span={1} offset={1}>
-                            <Input />
+                            <Input ></Input>
                         </Col>
                     </Row>
                     <Row>
