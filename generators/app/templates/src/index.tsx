@@ -7,7 +7,7 @@ import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
 import App from './App';
 
-
+// 开启mobx严格模式
 configure({ enforceActions: "observed" });
 
 // locale={zhCN}

@@ -7,6 +7,11 @@ const Index = async(() =>
 	import(/* webpackChunkName: "index" */ "@/pages/index/index")
 );
 
+const MobxDemo = async(() =>
+	import(/* webpackChunkName: "index" */ "@/pages/demo/mobxDemo")
+);
+
+
 // 404
 const NoFund = async(() =>
 	import(/* webpackChunkName: "noFund" */ "@/pages/noFund/noFund")
@@ -29,13 +34,13 @@ export default {
 			path: "/app",
 			component: Index,
 			routes: [
-             
+
 			]
 		},
-		// {
-		// 	path: "/login",
-		// 	component: Login
-		// },
+		{
+			path: "/mobxDemo",
+			component: MobxDemo
+		},
 		// {
 		// 	path: "/register",
 		// 	component: Register

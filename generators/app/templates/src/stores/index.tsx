@@ -1,5 +1,8 @@
-import BirdStore from './BirdStore';
+import OneStore  from './OneStore';
 
-export default {
-  BirdStore,
-}
+let oneStore = new OneStore();
+
+const stores = {
+  oneStore
+};
+export default stores;
