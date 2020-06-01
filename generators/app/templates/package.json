@@ -32,7 +32,7 @@
     "babel-preset-react-app": "^9.1.2",
     "eslint": "^7.1.0",
     "eslint-plugin-react": "^7.20.0",
-    "feflow-devkit-xbc-webpack4": "^0.0.21",
+    "feflow-devkit-xbc-webpack4": "^0.0.24",
     "husky": "^4.2.5",
     "mockjs": "^1.1.0"
   },
