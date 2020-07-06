@@ -5,7 +5,7 @@ module.exports = {
                 builder: "feflow-devkit-xbc-webpack4:dev",
                 options: {
                     isMinicss: false,
-                    port: 8966
+                    port: 9878
                 }
             },
             test: {
