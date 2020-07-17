@@ -3,6 +3,36 @@
 const yosay = require('yosay');
 const chalk = require('chalk');
 const Generator = require('yeoman-generator');
+const path = require('path')
+const fs = require('fs')
+
+const Utils = {
+	read(root, filter, files, prefix) {
+		prefix = prefix || '';
+		files = files || [];
+        filter = filter || this.noDotFiles;
+		var dir = path.join(root, prefix);
+        if (!fs.existsSync(dir)){
+            return files;
+		}
+        if (fs.statSync(dir).isDirectory()){
+			fs.readdirSync(dir)
+			.filter(filter)
+			.forEach(function (name) {
+				Utils.read(root, filter, files, path.join(prefix, name));
+			});
+		} else {
+			files.push(prefix);
+		}
+        return files;
+	},
+
+	noDotFiles(x) {
+		// console.log(x)
+		// return x[0] !== '.'; // 过滤器前面为.的文件
+		return true
+	}
+}
 
 module.exports = class extends Generator {
 
@@ -55,25 +85,49 @@ module.exports = class extends Generator {
    */
   writing() {
     const { name } = this.answers;
-    this.destinationRoot(this.destinationPath(name));
+	this.destinationRoot(this.destinationPath(name));
+	// 获取文件目录
+	const sourceDir = path.join(this.templatePath());
+	const filePaths = Utils.read(sourceDir);
+	console.log(filePaths)
+	// this.fs.copyTpl(
+    //     `${this.templatePath()}/**/!(_)*`,
+    //     this.destinationPath(),
+    //     this.answers,
+    //     {},
+    //     { globOptions: { dot: true, ignore: ['.+\.png']  } }    // Copy all dots files.
+	// );
 
-    this.fs.copyTpl(
-        `${this.templatePath()}/**/!(_)*`,
-        this.destinationPath(),
-        this.answers,
-        {},
-        { globOptions: { dot: true } }    // Copy all dots files.
-    );
+	// ejs无法编译png等文件 png等文件中带有%会导致ejs编译失败
+	filePaths.forEach(filePath => {
+		if(/.+\.html/.test(filePath)) {
+			this.fs.copyTpl(
+				`${this.templatePath()}/${filePath}`,
+				`${this.destinationPath()}/${filePath}`,
+				this.answers,
+				{},
+				{ globOptions: { dot: true } }    // Copy all dots files.
+			);
+		}else {
+			this.fs.copy(
+				`${this.templatePath()}/${filePath}`,
+				`${this.destinationPath()}/${filePath}`,
+				{ globOptions: { dot: true } },
+				this.answers,
+				{}
+			);
+		}
+	})
   }
+
 
   /**
    * Install dependencies
    */
   install() {
     const { logger } = this.options;
-
-    logger.info('安装依赖，过程持续1~2分钟');
-    this.npmInstall();
+    // logger.info('安装依赖，过程持续1~2分钟');
+    // this.npmInstall();
   }
 
   /**
@@ -83,11 +137,12 @@ module.exports = class extends Generator {
     const { name } = this.answers;
     const { logger } = this.options;
 
-    logger.info('本次初始化过程结束, 请通过以下命令运行项目: ');
-    console.log();
-    console.log(chalk.cyan('  cd'), name);
+    // logger.info('本次初始化过程结束, 请通过以下命令运行项目: ');
+    console.log('本次初始化过程结束, 请通过以下命令运行项目: ');
+	console.log(chalk.cyan('  cd'), name);
+	console.log(chalk.cyan('  cnpm i'),);
     console.log(`  ${chalk.cyan('fef dev')}`);
-    console.log();
-    logger.info('编码愉快!');
+    console.log('  编码愉快!');
+    // logger.info('编码愉快!');
   }
 };
